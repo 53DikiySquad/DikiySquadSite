@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+
+    <head>
+        <meta http-equiv = "Content-Type" content = "text/thml"; charset= "UTF-8"/>
+        <title> Download WinRAR Archive </title>
+        <link rel = "shortcut icon" href = "AvaSite.png"/>
+        <link href = "style.css" rel = "stylesheet" type = "text/css"/>
+        <script type = "text/javascript" src = "script.js"> </script>
+    </head>
+
+    <body>
+        <header>
+            <ul>
+                <li> <b id = "ds"> <div> <abbr title = "Команда Dikiy Squad"> <strong> <em> <u> <h2> By DS </h2> </u> </em> </strong> </abbr> </div> </b> </li>
+                <li> <a id = "yadisk" href = "https://yadi.sk/d/g6SsZjUXdntI2g" target = "_blank"> <abbr title = "Это загруска винрар архива с моими программами!">
+                    <div> <strong> <em> <h2> Download </h2> </em> </strong> </div> </abbr> </a> </li>
+                <li> <a id = "game" href = "By DS Game.exe" download = "" title = "Скачать игру"> <div> <strong> <em> <h2> Download Game </h2> </em> </strong> </div> </a> </li>
+                <li> <a id = "yt" href = "https://www.youtube.com/channel/UCud901Puf2PG1R1a2Dm-tGw?view_as=subscriber" target = "_blank">
+                    <abbr title = "Это мой канал на YouTube!"> <div> <strong> <em> <h2> Мой канал на YouTube! </h2> </em> </strong> </div> </abbr> </a> </li>
+                <!-- <div class = "search-box">
+                    <input class = "search-txt" type = "text" name = "" placeholder = "Type to search"/>
+                    <d class = "search-btn" href = "#"> </d>
+                    <i class = "fas fa-search"> </i>
+                </div> -->
+                </ul>
+        </header>
+
+        <hr/> <br/>
+
+        <article>
+            <form name = "form" method = "post">
+                <!-- <label id = "label_soc" for = "url" title = "Указание"> Введите свои соцсети </label>
+                <input id = "url" type = "url" title = "Введите свои соцсети" placeholder = "https://"/> <br/> <br/> -->
+                <!-- Со всем согласен <label id = "chekbox_label" for = "url"> </label> <input id = "chekbox" name = "url" type = "checkbox"/> -->
+                <!-- <label id = "label" for = "text" title = "Поисковик нашего сайта!"> Поисковик </label>
+                <input id = "text" type = "text" placeholder = "Поиск..." title = "Поиск" maxlength = "22"/>
+                <input id = "button" type = "button" value = "Найти" name = "text" title = "Найти"/> <br/> <br/> -->
+                <!-- <input id = "reset" type = "reset" value = "Перезагрузить сайт" title = "Перезагрузить сайт"/> -->
+                <a href = "#" onclick = "add()" id = "iconbtn"> <img src = "computer.ico" width = "100" height = "100" title = "Тыкай!"> </a> <br/> <br/>
+                <d id = "counter-text"> <abbr title = "Текст"> <strong> <em> <u> Your counter: </u> </em> </strong> </abbr>
+                <input type = "text" id = "text" disabled = "disabled" style = "text-align: center;" title = "Счётчик"/>
+                <script>
+                function add() {
+                    counter = counter + 1
+                    document.getElementById('text').value = counter;
+                    document.title = counter + " Counts"
+                }
+                </script> <br/> <br/>
+                <button> <d href = "#" onclick = "save()" id = "save"> <abbr title = "Сохранить"> <strong> <em> <u> Save </u> </em> </strong> </abbr> </d> </button>
+                <button> <d href = "#" onclick = "load()" id = "load"> <abbr title = "Загрузить"> <strong> <em> <u> Load </u> </em> </strong> </abbr> </d> </button>
+                <script>
+                    function save() {
+                        localStorage.setItem("counter", counter);
+                    }
+                </script>
+                <script>
+                    function load() {
+                        counter = localStorage.getItem("counter");
+                        counter = parceInt(counter);
+                        document.getElementById("text").value = counter;
+                        document.title = counter + " Counter";
+                    }
+                </script>
+            </form>
+        </article>
+
+        <footer>
+            <a id = "audio_name"> <abbr title = "Музыка"> <strong> <em> <u> <h2> Музыка </h2> </u> </em> </strong> </abbr> </a>
+            <audio id = "audio" controls = "controls" preload = "auto" loop = "loop" title = "Плеер">
+                <source src = "audio.mp3"/>
+                <source src = "audio1.mp3"/>
+            </audio>
+        </footer>
+    </body>
+
+    </html>
